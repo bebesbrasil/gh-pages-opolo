@@ -1,528 +1,762 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-
-    <meta name="description" content="">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:site_name" content="">
-    <link rel="canonical" href="/" />
-
-    
-    <meta name="twitter:card" content="summary">
-    
-
-    
-
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"></noscript>
-
-    
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "",
-      "url": "/",
-      "description": "",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-
-    <style>
-        body { background-color: #f6f6f6; color: #333333; }
-        .custom-hover:hover { opacity: 1 !important; text-decoration: underline !important; }
-        #searchResults::-webkit-scrollbar { width: 6px; }
-        #searchResults::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 4px; }
-
-        /* Estilos do Novo Layout Mosaico */
-        .bg-gradient-overlay {
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
-        }
-        .img-zoom { transition: transform 0.4s ease; }
-        .hero-card:hover .img-zoom { transform: scale(1.05); }
-        .badge-editorial { font-size: 0.75rem; background-color: white; color: #2B5C92; border: 1px solid #2B5C92; border-radius: 2px; }
-        .text-editorial { color: #2B5C92; }
-        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-    </style>
-</head>
-<body class="d-flex flex-column min-vh-100">
-
-    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #2b5c92;">
-        <div class="container py-1 py-lg-2">
-
-            <a class="navbar-brand fw-bold d-flex align-items-center me-lg-5" href="/">
-                
-                    <span class="fs-4 tracking-wide"></span>
-                
-            </a>
-
-            <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar menu de navegação">
-                <i class="bi bi-list text-white" style="font-size: 1.8rem;"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto gap-1 gap-lg-3">
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/" style="font-size: 0.95rem;">Início</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/melhores-receitas/" style="font-size: 0.95rem;">Melhores Receitas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/receitas/" style="font-size: 0.95rem;">Receitas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/onde-comer/" style="font-size: 0.95rem;">Onde Comer</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/receitas-salgadas/" style="font-size: 0.95rem;">Receitas Salgadas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/receitas-doces/" style="font-size: 0.95rem;">Receitas Docês</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/noticias/" style="font-size: 0.95rem;">Notícias</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/dicas/" style="font-size: 0.95rem;">Dicas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/bebidas/" style="font-size: 0.95rem;">Bebidas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/mais-saudavel/" style="font-size: 0.95rem;">Mais Saudável</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/negocios/" style="font-size: 0.95rem;">Negócios</a>
-                        </li>
-                        
-                    
-                </ul>
-                <form class="d-flex position-relative mt-3 mt-lg-0" onsubmit="event.preventDefault();" style="width: 100%; max-width: 320px;">
-                    <div class="input-group">
-                        <input class="form-control border-0 shadow-none py-2 ps-3" type="search" id="searchInput" placeholder="Pesquisar por..." autocomplete="off" style="font-size: 0.95rem; border-radius: 4px 0 0 4px;">
-                        <span class="input-group-text bg-white border-0 text-muted pe-3" style="border-radius: 0 4px 4px 0;">
-                            <i class="bi bi-search"></i>
-                        </span>
-                    </div>
-                    <div id="searchResults" class="list-group position-absolute w-100 shadow-lg rounded-3 d-none" style="top: 110%; z-index: 1000; max-height: 350px; overflow-y: auto;"></div>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container mt-4 mb-5 flex-grow-1">
-
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        
+        
+        
         
 
         
+            <title>O Polo</title>
+            <meta name="description" content="No blog O Polo você encontra notícias, receitas e muito mais
+">
+            
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="O Polo">
+            <meta property="og:description" content="No blog O Polo você encontra notícias, receitas e muito mais
+">
+            <meta property="og:site_name" content="O Polo">
+            <link rel="canonical" href="https://opolo.com.br/" />
+
+            
+            <meta property="og:image" content="https://opolo.com.br/static/uploads/o-polo-logotipo.webp?v=1792087104">
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="https://opolo.com.br/static/uploads/o-polo-logotipo.webp?v=1792087104">
             
         
 
         
-
         
-            <h2 class="fw-bold mb-4 border-bottom pb-2 text-dark mt-5 pt-4">Novos Artigos</h2>
-            <div class="row g-4 mb-4">
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/dicas-para-montar-sua-cozinha-dos-sonhos/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/dicas-para-montar-sua-cozinha-dos-sonhos-fc30b5-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/dicas-para-montar-sua-cozinha-dos-sonhos/" class="text-decoration-none text-dark custom-hover">Dicas para montar sua cozinha dos sonhos</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Amarildo Santos</span>
-                                <span><i class="bi bi-calendar3"></i> 05/04/2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/dicas-para-escolher-guarda-roupa-funcional-e-bonito/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/organizando-guarda-roupas-3a6729-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/dicas-para-escolher-guarda-roupa-funcional-e-bonito/" class="text-decoration-none text-dark custom-hover">Dicas para escolher guarda roupa funcional e bonito</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Simone Masson</span>
-                                <span><i class="bi bi-calendar3"></i> 31/03/2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/5-dicas-para-quem-cozinha-e-precisa-resolver-papelada-rapida/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/5-dicas-para-quem-cozinha-e-precisa-resolver-papelada-rapida-e9674d-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/5-dicas-para-quem-cozinha-e-precisa-resolver-papelada-rapida/" class="text-decoration-none text-dark custom-hover">5 dicas para quem cozinha e precisa resolver papelada rápida</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Amarildo Santos</span>
-                                <span><i class="bi bi-calendar3"></i> 26/03/2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/como-preparar-uma-delicia-assada-de-milho-passo-a-passo/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/como-preparar-uma-delicia-assada-de-milho-passo-a-passo-6b18fd-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/como-preparar-uma-delicia-assada-de-milho-passo-a-passo/" class="text-decoration-none text-dark custom-hover">Como preparar uma delícia assada de milho passo a passo</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Amarildo Santos</span>
-                                <span><i class="bi bi-calendar3"></i> 03/03/2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/barracas-resistentes-para-quem-ama-cozinhar-em-meio-a-natureza/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/barracas-resistentes-para-quem-ama-cozinhar-em-meio-a-natureza-a138f5-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/barracas-resistentes-para-quem-ama-cozinhar-em-meio-a-natureza/" class="text-decoration-none text-dark custom-hover">Barracas resistentes para quem ama cozinhar em meio à natureza</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Amarildo Santos</span>
-                                <span><i class="bi bi-calendar3"></i> 02/03/2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/como-comer-atum-enlatado/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/como-comer-atum-enlatado-52f0ba-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/como-comer-atum-enlatado/" class="text-decoration-none text-dark custom-hover">Como comer atum enlatado: Veja 3 receitas!</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> opolo.com.br</span>
-                                <span><i class="bi bi-calendar3"></i> 26/02/2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/tendencias-na-area-de-formacao-em-saude-no-brasil/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/nutricionista-d56f07-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/tendencias-na-area-de-formacao-em-saude-no-brasil/" class="text-decoration-none text-dark custom-hover">Tendências na Área de Formação em Saúde no Brasil</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> opolo.com.br</span>
-                                <span><i class="bi bi-calendar3"></i> 24/02/2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/advogado-para-negocios-locais-em-recife/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/advogado-para-negocios-locais-em-recife-8594d4-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/advogado-para-negocios-locais-em-recife/" class="text-decoration-none text-dark custom-hover">Advogado para Negõcios Locais em Recife</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Amarildo Santos</span>
-                                <span><i class="bi bi-calendar3"></i> 24/02/2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/quais-os-melhores-programas-de-trainee-para-chefs-em-2026/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/quais-os-melhores-programas-de-trainee-para-chefs-em-2026-6230e3-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/quais-os-melhores-programas-de-trainee-para-chefs-em-2026/" class="text-decoration-none text-dark custom-hover">Quais os melhores programas de trainee para chefs em 2026?</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Amarildo Santos</span>
-                                <span><i class="bi bi-calendar3"></i> 20/02/2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/engenharia-de-revestimentos-o-papel-do-piso-laminado-vinilico-colas-e-autonivelantes-na-cozinha-industrial/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/images2-fb925e-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/engenharia-de-revestimentos-o-papel-do-piso-laminado-vinilico-colas-e-autonivelantes-na-cozinha-industrial/" class="text-decoration-none text-dark custom-hover">Engenharia de Revestimentos: O Papel do Piso Laminado, Vinílico, Colas e Autonivelantes na Cozinha Industrial</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> opolo.com.br</span>
-                                <span><i class="bi bi-calendar3"></i> 12/02/2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+        <link rel="shortcut icon" href="/static/uploads/o-polo-icone-favicon.webp?v=1792087116" />
+        <link rel="apple-touch-icon" href="/static/uploads/o-polo-icone-favicon.webp?v=1792087116">
         
 
         
-        <nav aria-label="Navegação de páginas" class="mt-5 pt-4 border-top">
-            <ul class="pagination justify-content-center">
-                
-                <li class="page-item"><a class="page-link text-dark fw-bold border-0 bg-transparent" href="/page/2/"><i class="bi bi-arrow-left"></i> Mais Recentes</a></li>
-                
-                <li class="page-item disabled"><span class="page-link text-muted bg-transparent border-0 px-4">Página 3 de 23</span></li>
-                
-                <li class="page-item"><a class="page-link text-dark fw-bold border-0 bg-transparent" href="/page/4/">Mais Antigos <i class="bi bi-arrow-right"></i></a></li>
-                
-            </ul>
-        </nav>
+            
+                <link rel="prev" href="/page/2/">
+            
+            
+                <link rel="next" href="/page/4/">
+            
+         
         
 
-    </main>
+        <!-- Bootstrap CSS para compatibilidade com posts gerados -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <footer class="text-light py-5 mt-auto" style="background-color: #212529;">
-        <div class="container">
-            <div class="row gy-4 text-center text-md-start">
-                <div class="col-lg-5 pe-lg-5">
-                    <p class="text-uppercase fw-bold mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
-                        
-                            
-                        
-                    </p>
-                    <p class="text-light opacity-75 small lh-lg mb-0">
-                        
-                    </p>
-                </div>
-                <div class="col-lg-3">
-                    <p class="text-uppercase fw-bold mb-3 text-white-50" style="font-size: 0.9rem; letter-spacing: 1px;">Navegação</p>
-                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-                        
-                            <li><a href="/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Início</a></li>
-                            
-                            <li><a href="/contato/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Contato</a></li>
-                            
-                            <li><a href="/politica-de-privacidade/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Política de Privacidade</a></li>
-                            
-                            <li><a href="/sobre-nos/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Sobre Nós</a></li>
-                            
-                            <li><a href="/termos-e-condicoes/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Termos e Condições</a></li>
-                            
-                        
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <p class="text-uppercase fw-bold mb-3 text-white-50" style="font-size: 0.9rem; letter-spacing: 1px;">Siga-nos</p>
-                    <div class="d-flex gap-2 justify-content-center justify-content-md-start flex-wrap">
-                        
-                        
-                        
-                        
-                    </div>
-                </div>
-            </div>
-            <hr class="mt-5 mb-4 border-secondary opacity-25">
-
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <p class="small mb-0 opacity-75">
-                        
-                    </p>
-                </div>
-
-                <div class="col-md-6 text-center text-md-end">
-                    <ul class="list-inline mb-0">
-                        
-                            
-                            
-
-                            
-                        
-                            
-                            
-
-                            
-                        
-                            
-                            
-
-                            
-                        
-                            
-                            
-
-                            
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const searchInput = document.getElementById('searchInput');
-            const searchResults = document.getElementById('searchResults');
-            let postsData = null;
-            let carregandoBanco = false;
-
-            searchInput.addEventListener('focus', async () => {
-                if (!postsData && !carregandoBanco) {
-                    carregandoBanco = true;
-                    try {
-                        const response = await fetch('/posts.json');
-                        if (response.ok) {
-                            postsData = await response.json();
-                        }
-                    } catch (error) {
-                        console.error("Erro ao carregar o banco de pesquisa.");
-                    }
+        <link rel="stylesheet" href="/themes/taste/assets/css/style.css">       
+        
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
                 }
-            });
+            </style>
+        </noscript>     
+        
+        
+    </head>
+    <body class="home-template">
+<header class="header" id="js-header">
 
-            searchInput.addEventListener('input', (e) => {
-                if (!postsData) return;
+   <a href="/" class="logo">
+      
+         <img src="/static/uploads/o-polo-logotipo.webp?v=1792087104" alt="O Polo" width="150" height="auto">
+      
+   </a>
 
-                const query = e.target.value.toLowerCase().trim();
-                searchResults.innerHTML = '';
+   <nav class="navbar js-navbar">
+      <button class="navbar__toggle js-toggle" aria-label="Menu">
+         <span class="navbar__toggle-box">
+            <span class="navbar__toggle-inner">Menu</span>
+         </span>
+      </button>
+      <ul class="navbar__menu">
+   
+       <li>
+          <a href="/">Início</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/melhores-receitas/">Melhores Receitas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/receitas/">Receitas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/onde-comer/">Onde Comer</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/receitas-salgadas/">Receitas Salgadas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/receitas-doces/">Receitas Docês</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/noticias/">Notícias</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/dicas/">Dicas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/bebidas/">Bebidas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/mais-saudavel/">Mais Saudável</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/negocios/">Negócios</a>
+       </li>
+       
+       
+       <li>
+          <a href="/contato/">Contato</a>
+       </li>
+       
+       <li>
+          <a href="/politica-de-privacidade/">Política de Privacidade</a>
+       </li>
+       
+       <li>
+          <a href="/sobre-nos/">Sobre Nós</a>
+       </li>
+       
+       <li>
+          <a href="/termos-e-condicoes/">Termos e Condições</a>
+       </li>
+       
+   
+</ul>
+   </nav>
 
-                if (query.length < 2) {
-                    searchResults.classList.add('d-none');
-                    return;
-                }
+   <div class="search">
+      <div class="search__overlay js-search-overlay">
+         <form action="/pesquisa/" method="get" class="search__form">
+            <input type="search" name="q" placeholder="Pesquisar..." class="search__input" required>
+         </form>
+      </div>
+      <button
+         class="search__btn js-search-btn"
+         aria-label="Pesquisar">
+         <svg role="presentation" focusable="false" height="18" width="18">
+            <use xlink:href="/themes/taste/assets/svg/svg-map.svg#search"/>
+         </svg>
+      </button>
+   </div>
 
-                const filteredPosts = postsData.filter(post =>
-                    post.title.toLowerCase().includes(query)
-                );
+</header>
+<main>
+   <div class="wrapper">
+      
 
-                if (filteredPosts.length > 0) {
-                    filteredPosts.forEach(post => {
-                        const link = document.createElement('a');
-                            const url = `/${post.slug}/`;
-                            link.href = url;
-                            link.className = 'list-group-item list-group-item-action d-flex align-items-center py-3 border-start-0 border-end-0 border-top-0';
+      <div class="l-grid l-grid--3">
+         
+            <article class="c-card">
+               
+                  <a href="/dicas-para-montar-sua-cozinha-dos-sonhos/" class="c-card__image">
+                     <img
+                        src="/static/uploads/dicas-para-montar-sua-cozinha-dos-sonhos-fc30b5-thumb.webp"
+                        loading="lazy"
+                        alt="Dicas para montar sua cozinha dos sonhos">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/dicas/">Dicas</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/dicas-para-montar-sua-cozinha-dos-sonhos/" class="invert">
+                           Dicas para montar sua cozinha dos sonhos
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2026-04-05T12:11">
+                        05/04/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/dicas-para-escolher-guarda-roupa-funcional-e-bonito/" class="c-card__image">
+                     <img
+                        src="/static/uploads/organizando-guarda-roupas-3a6729-thumb.webp"
+                        loading="lazy"
+                        alt="Dicas para escolher guarda roupa funcional e bonito">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/dicas/">Dicas</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/dicas-para-escolher-guarda-roupa-funcional-e-bonito/" class="invert">
+                           Dicas para escolher guarda roupa funcional e bonito
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2026-03-31T21:05">
+                        31/03/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/5-dicas-para-quem-cozinha-e-precisa-resolver-papelada-rapida/" class="c-card__image">
+                     <img
+                        src="/static/uploads/5-dicas-para-quem-cozinha-e-precisa-resolver-papelada-rapida-e9674d-thumb.webp"
+                        loading="lazy"
+                        alt="5 dicas para quem cozinha e precisa resolver papelada rápida">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/mais-saudavel/">Mais Saudável</a>
+                           </div>
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/5-dicas-para-quem-cozinha-e-precisa-resolver-papelada-rapida/" class="invert">
+                           5 dicas para quem cozinha e precisa resolver papelada rápida
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2026-03-26T00:00">
+                        26/03/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/como-preparar-uma-delicia-assada-de-milho-passo-a-passo/" class="c-card__image">
+                     <img
+                        src="/static/uploads/como-preparar-uma-delicia-assada-de-milho-passo-a-passo-6b18fd-thumb.webp"
+                        loading="lazy"
+                        alt="Como preparar uma delícia assada de milho passo a passo">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/receitas/">Receitas</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/como-preparar-uma-delicia-assada-de-milho-passo-a-passo/" class="invert">
+                           Como preparar uma delícia assada de milho passo a passo
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2026-03-03T15:22">
+                        03/03/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/barracas-resistentes-para-quem-ama-cozinhar-em-meio-a-natureza/" class="c-card__image">
+                     <img
+                        src="/static/uploads/barracas-resistentes-para-quem-ama-cozinhar-em-meio-a-natureza-a138f5-thumb.webp"
+                        loading="lazy"
+                        alt="Barracas resistentes para quem ama cozinhar em meio à natureza">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/bebidas/">Bebidas</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/barracas-resistentes-para-quem-ama-cozinhar-em-meio-a-natureza/" class="invert">
+                           Barracas resistentes para quem ama cozinhar em meio à natureza
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2026-03-02T00:00">
+                        02/03/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/como-comer-atum-enlatado/" class="c-card__image">
+                     <img
+                        src="/static/uploads/como-comer-atum-enlatado-52f0ba-thumb.webp"
+                        loading="lazy"
+                        alt="Como comer atum enlatado: Veja 3 receitas!">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/melhores-receitas/">Melhores Receitas</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/como-comer-atum-enlatado/" class="invert">
+                           Como comer atum enlatado: Veja 3 receitas!
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2026-02-26T10:40">
+                        26/02/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/tendencias-na-area-de-formacao-em-saude-no-brasil/" class="c-card__image">
+                     <img
+                        src="/static/uploads/nutricionista-d56f07-thumb.webp"
+                        loading="lazy"
+                        alt="Tendências na Área de Formação em Saúde no Brasil">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/noticias/">Notícias</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/tendencias-na-area-de-formacao-em-saude-no-brasil/" class="invert">
+                           Tendências na Área de Formação em Saúde no Brasil
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2026-02-24T22:24">
+                        24/02/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/advogado-para-negocios-locais-em-recife/" class="c-card__image">
+                     <img
+                        src="/static/uploads/advogado-para-negocios-locais-em-recife-8594d4-thumb.webp"
+                        loading="lazy"
+                        alt="Advogado para Negõcios Locais em Recife">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/negocios/">Negócios</a>
+                           </div>
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/advogado-para-negocios-locais-em-recife/" class="invert">
+                           Advogado para Negõcios Locais em Recife
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2026-02-24T00:00">
+                        24/02/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/quais-os-melhores-programas-de-trainee-para-chefs-em-2026/" class="c-card__image">
+                     <img
+                        src="/static/uploads/quais-os-melhores-programas-de-trainee-para-chefs-em-2026-6230e3-thumb.webp"
+                        loading="lazy"
+                        alt="Quais os melhores programas de trainee para chefs em 2026?">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/dicas/">Dicas</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/quais-os-melhores-programas-de-trainee-para-chefs-em-2026/" class="invert">
+                           Quais os melhores programas de trainee para chefs em 2026?
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2026-02-20T10:50">
+                        20/02/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/engenharia-de-revestimentos-o-papel-do-piso-laminado-vinilico-colas-e-autonivelantes-na-cozinha-industrial/" class="c-card__image">
+                     <img
+                        src="/static/uploads/images2-fb925e-thumb.webp"
+                        loading="lazy"
+                        alt="Engenharia de Revestimentos: O Papel do Piso Laminado, Vinílico, Colas e Autonivelantes na Cozinha Industrial">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/noticias/">Notícias</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/engenharia-de-revestimentos-o-papel-do-piso-laminado-vinilico-colas-e-autonivelantes-na-cozinha-industrial/" class="invert">
+                           Engenharia de Revestimentos: O Papel do Piso Laminado, Vinílico, Colas e Autonivelantes na Cozinha Industrial
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2026-02-12T13:26">
+                        12/02/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+      </div>
+      
+      
+   <nav class="pagination">
+      
+         <a href="/page/2/" class="btn">
+            Anterior
+         </a>
+      
+      
+      
+         <a href="/page/4/" class="btn">
+            Próxima
+         </a>
+      
+   </nav>
 
-                        const imgHtml = post.image
-                            ? `<img src="${post.image}" class="rounded me-3 object-fit-cover" style="width: 45px; height: 45px;">`
-                            : `<div class="bg-secondary rounded me-3 opacity-25" style="width: 45px; height: 45px;"></div>`;
+   </div>
+</main>
 
-                        link.innerHTML = `
-                            ${imgHtml}
-                            <div class="overflow-hidden">
-                                <h6 class="mb-0 text-truncate text-dark fw-bold" style="font-size: 0.9rem;">${post.title}</h6>
-                                <small class="text-muted" style="font-size: 0.75rem;">${post.date}</small>
-                            </div>
-                        `;
-                        searchResults.appendChild(link);
-                    });
-                    searchResults.classList.remove('d-none');
-                } else {
-                    searchResults.innerHTML = '<div class="list-group-item text-muted text-center py-3 border-0 small">Nenhum artigo encontrado.</div>';
-                    searchResults.classList.remove('d-none');
-                }
-            });
+<footer class="footer">
+   <div class="footer__social">
+      
+      
+      
+      
+   </div>
+   
+   <div class="footer__description" style="max-width: 600px; margin: 0 auto 2rem; color: #a1a1aa; font-size: 0.95rem; text-align: center;">
+      O Polo Gastronômico traz notícias, dicas para restaurantes, pizzarias, lanchonetes, gestão do seu negócio, lugares para comer, além de receitas deliciosas!
 
-            document.addEventListener('click', (e) => {
-                if (searchInput && searchResults && !searchInput.contains(e.target) && !searchResults.contains(e.target)) {
-                    searchResults.classList.add('d-none');
-                }
-            });
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+O conteúdo fornecido neste blog destina-se apenas a fins informativos, não se responsabilizando por quaisquer resultados ou consequências decorrentes da implementação das informações aqui contidas.
+   </div>
+   
 
-    
+   <div class="footer__copyright">
+      
+      © 2026 O POLO - Todos os direitos reservados.
+   </div>
+</footer>
 
+<script>
+   window.publiiThemeMenuConfig = {    
+      mobileMenuMode: 'sidebar',
+      animationSpeed: 300,
+      submenuWidth: 'auto',
+      doubleClickTime: 500,
+      mobileMenuExpandableSubmenus: true, 
+      relatedContainerForOverlayMenuSelector: '.navbar',
+   };
+</script>
+<script defer src="/themes/taste/assets/js/scripts.min.js"></script>
+
+<script>        
+   var images = document.querySelectorAll('img[loading]');
+
+   for (var i = 0; i < images.length; i++) {
+      if (images[i].complete) {
+            images[i].classList.add('is-loaded');
+      } else {
+            images[i].addEventListener('load', function () {
+               this.classList.add('is-loaded');
+            }, false);
+      }
+   }
+</script>
+
+
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>

@@ -1,528 +1,762 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-
-    <meta name="description" content="">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:site_name" content="">
-    <link rel="canonical" href="/" />
-
-    
-    <meta name="twitter:card" content="summary">
-    
-
-    
-
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"></noscript>
-
-    
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "",
-      "url": "/",
-      "description": "",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-
-    <style>
-        body { background-color: #f6f6f6; color: #333333; }
-        .custom-hover:hover { opacity: 1 !important; text-decoration: underline !important; }
-        #searchResults::-webkit-scrollbar { width: 6px; }
-        #searchResults::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 4px; }
-
-        /* Estilos do Novo Layout Mosaico */
-        .bg-gradient-overlay {
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
-        }
-        .img-zoom { transition: transform 0.4s ease; }
-        .hero-card:hover .img-zoom { transform: scale(1.05); }
-        .badge-editorial { font-size: 0.75rem; background-color: white; color: #2B5C92; border: 1px solid #2B5C92; border-radius: 2px; }
-        .text-editorial { color: #2B5C92; }
-        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-    </style>
-</head>
-<body class="d-flex flex-column min-vh-100">
-
-    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #2b5c92;">
-        <div class="container py-1 py-lg-2">
-
-            <a class="navbar-brand fw-bold d-flex align-items-center me-lg-5" href="/">
-                
-                    <span class="fs-4 tracking-wide"></span>
-                
-            </a>
-
-            <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar menu de navegação">
-                <i class="bi bi-list text-white" style="font-size: 1.8rem;"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto gap-1 gap-lg-3">
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/" style="font-size: 0.95rem;">Início</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/melhores-receitas/" style="font-size: 0.95rem;">Melhores Receitas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/receitas/" style="font-size: 0.95rem;">Receitas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/onde-comer/" style="font-size: 0.95rem;">Onde Comer</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/receitas-salgadas/" style="font-size: 0.95rem;">Receitas Salgadas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/receitas-doces/" style="font-size: 0.95rem;">Receitas Docês</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/noticias/" style="font-size: 0.95rem;">Notícias</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/dicas/" style="font-size: 0.95rem;">Dicas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/bebidas/" style="font-size: 0.95rem;">Bebidas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/mais-saudavel/" style="font-size: 0.95rem;">Mais Saudável</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/negocios/" style="font-size: 0.95rem;">Negócios</a>
-                        </li>
-                        
-                    
-                </ul>
-                <form class="d-flex position-relative mt-3 mt-lg-0" onsubmit="event.preventDefault();" style="width: 100%; max-width: 320px;">
-                    <div class="input-group">
-                        <input class="form-control border-0 shadow-none py-2 ps-3" type="search" id="searchInput" placeholder="Pesquisar por..." autocomplete="off" style="font-size: 0.95rem; border-radius: 4px 0 0 4px;">
-                        <span class="input-group-text bg-white border-0 text-muted pe-3" style="border-radius: 0 4px 4px 0;">
-                            <i class="bi bi-search"></i>
-                        </span>
-                    </div>
-                    <div id="searchResults" class="list-group position-absolute w-100 shadow-lg rounded-3 d-none" style="top: 110%; z-index: 1000; max-height: 350px; overflow-y: auto;"></div>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container mt-4 mb-5 flex-grow-1">
-
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        
+        
+        
         
 
         
+            <title>O Polo</title>
+            <meta name="description" content="No blog O Polo você encontra notícias, receitas e muito mais
+">
+            
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="O Polo">
+            <meta property="og:description" content="No blog O Polo você encontra notícias, receitas e muito mais
+">
+            <meta property="og:site_name" content="O Polo">
+            <link rel="canonical" href="https://opolo.com.br/" />
+
+            
+            <meta property="og:image" content="https://opolo.com.br/static/uploads/o-polo-logotipo.webp?v=1792087104">
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="https://opolo.com.br/static/uploads/o-polo-logotipo.webp?v=1792087104">
             
         
 
         
-
         
-            <h2 class="fw-bold mb-4 border-bottom pb-2 text-dark mt-5 pt-4">Novos Artigos</h2>
-            <div class="row g-4 mb-4">
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/9-dicas-para-iniciantes-na-cozinha/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/iniciante-cozinha-dicas-1-b19781-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/9-dicas-para-iniciantes-na-cozinha/" class="text-decoration-none text-dark custom-hover">9 Dicas para Iniciantes na Cozinha</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Simone Masson</span>
-                                <span><i class="bi bi-calendar3"></i> 02/12/2023</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/desperte-seu-dia-7-opcoes-de-bebidas-energizantes-com-cafeina/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/bebidas-com-cafeina-estimulante-enegizantes-f14da0-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/desperte-seu-dia-7-opcoes-de-bebidas-energizantes-com-cafeina/" class="text-decoration-none text-dark custom-hover">Desperte Seu Dia com 7  Bebidas Energizantes com Cafeína</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Simone Masson</span>
-                                <span><i class="bi bi-calendar3"></i> 02/12/2023</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/conheca-3-opcoes-de-restaurantes-franceses-para-desfrutar-em-sao-paulo/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/3-opcoes-restaurantes-comida-francesa-2a5e09-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/conheca-3-opcoes-de-restaurantes-franceses-para-desfrutar-em-sao-paulo/" class="text-decoration-none text-dark custom-hover">Conheça 3 opções de restaurantes franceses para desfrutar em São Paulo</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Simone Masson</span>
-                                <span><i class="bi bi-calendar3"></i> 01/12/2023</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/desvende-o-mundo-dos-drinks-com-estas-6-receitas-simples-e-torne-se-um-especialista-no-assunto/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/top-6-drinks-f1c83e-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/desvende-o-mundo-dos-drinks-com-estas-6-receitas-simples-e-torne-se-um-especialista-no-assunto/" class="text-decoration-none text-dark custom-hover">Desvende o mundo dos drinks com 6 receitas simples e torne-se um especialista no assunto</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Simone Masson</span>
-                                <span><i class="bi bi-calendar3"></i> 01/12/2023</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/lista-das-7-faculdades-de-gastronomia-com-notas-mais-altas-no-mec/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/top-7-faculdades-gastronomia-nota-mec-2c1883-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/lista-das-7-faculdades-de-gastronomia-com-notas-mais-altas-no-mec/" class="text-decoration-none text-dark custom-hover">Lista das 7 Faculdades de Gastronomia com Notas Mais Altas no MEC</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Simone Masson</span>
-                                <span><i class="bi bi-calendar3"></i> 01/12/2023</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/pao-bolo-ou-pao-de-liquidificador/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/pao-bolo-ou-pao-de-liquidificador-645713-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/pao-bolo-ou-pao-de-liquidificador/" class="text-decoration-none text-dark custom-hover">Pão Bolo ou Pão de Liquidificador</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Simone Masson</span>
-                                <span><i class="bi bi-calendar3"></i> 01/12/2023</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/risole-facil-de-carne-moida/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/risoles-de-carne-o-opolo-gastronomico-400ead-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/risole-facil-de-carne-moida/" class="text-decoration-none text-dark custom-hover">Risole Fácil de Carne Moída vem Aprender a Fazer</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Simone Masson</span>
-                                <span><i class="bi bi-calendar3"></i> 30/11/2023</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/iogurte-de-morango-caseiro-com-apenas-3-ingredientes/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/iogurte-de-morango-caseiro-com-apenas-3-ingredientes-017590-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/iogurte-de-morango-caseiro-com-apenas-3-ingredientes/" class="text-decoration-none text-dark custom-hover">Iogurte de morango caseiro com apenas 3 ingredientes</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Simone Masson</span>
-                                <span><i class="bi bi-calendar3"></i> 29/11/2023</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/bolo-de-chocolate-bem-chocolatudo/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/bolo-de-chocolate-bem-chocolatudo-1-62eb90-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/bolo-de-chocolate-bem-chocolatudo/" class="text-decoration-none text-dark custom-hover">Bolo de Chocolate Bem Chocolatudo</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Simone Masson</span>
-                                <span><i class="bi bi-calendar3"></i> 29/11/2023</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center gap-3 h-100">
-                        
-                        <a href="/pudim-de-leite-condensado-delicioso-e-sem-quebrar/" class="flex-shrink-0 overflow-hidden shadow-sm">
-                            <img src="/static/uploads/pudim-de-leite-condensado-delicioso-7ffe2f-thumb.webp" alt="None" title="None" class="hero-card img-zoom" style="width: 120px; height: 85px; object-fit: cover;" loading="lazy">
-                        </a>
-                        
-                        <div class="d-flex flex-column justify-content-center">
-                            <h3 class="fw-bold mb-1 lh-sm line-clamp-2" style="font-size: 0.95rem;">
-                                <a href="/pudim-de-leite-condensado-delicioso-e-sem-quebrar/" class="text-decoration-none text-dark custom-hover">Pudim de Leite Condensado Delicioso e Sem Quebrar</a>
-                            </h3>
-                            <div class="text-muted fw-semibold d-flex align-items-center gap-2 mt-1" style="font-size: 0.75rem;">
-                                
-                                <span class="text-dark"><i class="bi bi-person-fill text-muted"></i> Simone Masson</span>
-                                <span><i class="bi bi-calendar3"></i> 29/11/2023</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+        <link rel="shortcut icon" href="/static/uploads/o-polo-icone-favicon.webp?v=1792087116" />
+        <link rel="apple-touch-icon" href="/static/uploads/o-polo-icone-favicon.webp?v=1792087116">
         
 
         
-        <nav aria-label="Navegação de páginas" class="mt-5 pt-4 border-top">
-            <ul class="pagination justify-content-center">
-                
-                <li class="page-item"><a class="page-link text-dark fw-bold border-0 bg-transparent" href="/page/20/"><i class="bi bi-arrow-left"></i> Mais Recentes</a></li>
-                
-                <li class="page-item disabled"><span class="page-link text-muted bg-transparent border-0 px-4">Página 21 de 23</span></li>
-                
-                <li class="page-item"><a class="page-link text-dark fw-bold border-0 bg-transparent" href="/page/22/">Mais Antigos <i class="bi bi-arrow-right"></i></a></li>
-                
-            </ul>
-        </nav>
+            
+                <link rel="prev" href="/page/20/">
+            
+            
+                <link rel="next" href="/page/22/">
+            
+         
         
 
-    </main>
+        <!-- Bootstrap CSS para compatibilidade com posts gerados -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <footer class="text-light py-5 mt-auto" style="background-color: #212529;">
-        <div class="container">
-            <div class="row gy-4 text-center text-md-start">
-                <div class="col-lg-5 pe-lg-5">
-                    <p class="text-uppercase fw-bold mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
-                        
-                            
-                        
-                    </p>
-                    <p class="text-light opacity-75 small lh-lg mb-0">
-                        
-                    </p>
-                </div>
-                <div class="col-lg-3">
-                    <p class="text-uppercase fw-bold mb-3 text-white-50" style="font-size: 0.9rem; letter-spacing: 1px;">Navegação</p>
-                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-                        
-                            <li><a href="/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Início</a></li>
-                            
-                            <li><a href="/contato/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Contato</a></li>
-                            
-                            <li><a href="/politica-de-privacidade/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Política de Privacidade</a></li>
-                            
-                            <li><a href="/sobre-nos/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Sobre Nós</a></li>
-                            
-                            <li><a href="/termos-e-condicoes/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Termos e Condições</a></li>
-                            
-                        
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <p class="text-uppercase fw-bold mb-3 text-white-50" style="font-size: 0.9rem; letter-spacing: 1px;">Siga-nos</p>
-                    <div class="d-flex gap-2 justify-content-center justify-content-md-start flex-wrap">
-                        
-                        
-                        
-                        
-                    </div>
-                </div>
-            </div>
-            <hr class="mt-5 mb-4 border-secondary opacity-25">
-
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <p class="small mb-0 opacity-75">
-                        
-                    </p>
-                </div>
-
-                <div class="col-md-6 text-center text-md-end">
-                    <ul class="list-inline mb-0">
-                        
-                            
-                            
-
-                            
-                        
-                            
-                            
-
-                            
-                        
-                            
-                            
-
-                            
-                        
-                            
-                            
-
-                            
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const searchInput = document.getElementById('searchInput');
-            const searchResults = document.getElementById('searchResults');
-            let postsData = null;
-            let carregandoBanco = false;
-
-            searchInput.addEventListener('focus', async () => {
-                if (!postsData && !carregandoBanco) {
-                    carregandoBanco = true;
-                    try {
-                        const response = await fetch('/posts.json');
-                        if (response.ok) {
-                            postsData = await response.json();
-                        }
-                    } catch (error) {
-                        console.error("Erro ao carregar o banco de pesquisa.");
-                    }
+        <link rel="stylesheet" href="/themes/taste/assets/css/style.css">       
+        
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
                 }
-            });
+            </style>
+        </noscript>     
+        
+        
+    </head>
+    <body class="home-template">
+<header class="header" id="js-header">
 
-            searchInput.addEventListener('input', (e) => {
-                if (!postsData) return;
+   <a href="/" class="logo">
+      
+         <img src="/static/uploads/o-polo-logotipo.webp?v=1792087104" alt="O Polo" width="150" height="auto">
+      
+   </a>
 
-                const query = e.target.value.toLowerCase().trim();
-                searchResults.innerHTML = '';
+   <nav class="navbar js-navbar">
+      <button class="navbar__toggle js-toggle" aria-label="Menu">
+         <span class="navbar__toggle-box">
+            <span class="navbar__toggle-inner">Menu</span>
+         </span>
+      </button>
+      <ul class="navbar__menu">
+   
+       <li>
+          <a href="/">Início</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/melhores-receitas/">Melhores Receitas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/receitas/">Receitas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/onde-comer/">Onde Comer</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/receitas-salgadas/">Receitas Salgadas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/receitas-doces/">Receitas Docês</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/noticias/">Notícias</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/dicas/">Dicas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/bebidas/">Bebidas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/mais-saudavel/">Mais Saudável</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/negocios/">Negócios</a>
+       </li>
+       
+       
+       <li>
+          <a href="/contato/">Contato</a>
+       </li>
+       
+       <li>
+          <a href="/politica-de-privacidade/">Política de Privacidade</a>
+       </li>
+       
+       <li>
+          <a href="/sobre-nos/">Sobre Nós</a>
+       </li>
+       
+       <li>
+          <a href="/termos-e-condicoes/">Termos e Condições</a>
+       </li>
+       
+   
+</ul>
+   </nav>
 
-                if (query.length < 2) {
-                    searchResults.classList.add('d-none');
-                    return;
-                }
+   <div class="search">
+      <div class="search__overlay js-search-overlay">
+         <form action="/pesquisa/" method="get" class="search__form">
+            <input type="search" name="q" placeholder="Pesquisar..." class="search__input" required>
+         </form>
+      </div>
+      <button
+         class="search__btn js-search-btn"
+         aria-label="Pesquisar">
+         <svg role="presentation" focusable="false" height="18" width="18">
+            <use xlink:href="/themes/taste/assets/svg/svg-map.svg#search"/>
+         </svg>
+      </button>
+   </div>
 
-                const filteredPosts = postsData.filter(post =>
-                    post.title.toLowerCase().includes(query)
-                );
+</header>
+<main>
+   <div class="wrapper">
+      
 
-                if (filteredPosts.length > 0) {
-                    filteredPosts.forEach(post => {
-                        const link = document.createElement('a');
-                            const url = `/${post.slug}/`;
-                            link.href = url;
-                            link.className = 'list-group-item list-group-item-action d-flex align-items-center py-3 border-start-0 border-end-0 border-top-0';
+      <div class="l-grid l-grid--3">
+         
+            <article class="c-card">
+               
+                  <a href="/9-dicas-para-iniciantes-na-cozinha/" class="c-card__image">
+                     <img
+                        src="/static/uploads/iniciante-cozinha-dicas-1-b19781-thumb.webp"
+                        loading="lazy"
+                        alt="9 Dicas para Iniciantes na Cozinha">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/dicas/">Dicas</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/9-dicas-para-iniciantes-na-cozinha/" class="invert">
+                           9 Dicas para Iniciantes na Cozinha
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2023-12-02T00:40">
+                        02/12/2023
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/desperte-seu-dia-7-opcoes-de-bebidas-energizantes-com-cafeina/" class="c-card__image">
+                     <img
+                        src="/static/uploads/bebidas-com-cafeina-estimulante-enegizantes-f14da0-thumb.webp"
+                        loading="lazy"
+                        alt="Desperte Seu Dia com 7  Bebidas Energizantes com Cafeína">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/dicas/">Dicas</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/desperte-seu-dia-7-opcoes-de-bebidas-energizantes-com-cafeina/" class="invert">
+                           Desperte Seu Dia com 7  Bebidas Energizantes com Cafeína
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2023-12-02T00:11">
+                        02/12/2023
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/conheca-3-opcoes-de-restaurantes-franceses-para-desfrutar-em-sao-paulo/" class="c-card__image">
+                     <img
+                        src="/static/uploads/3-opcoes-restaurantes-comida-francesa-2a5e09-thumb.webp"
+                        loading="lazy"
+                        alt="Conheça 3 opções de restaurantes franceses para desfrutar em São Paulo">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/onde-comer/">Onde Comer</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/conheca-3-opcoes-de-restaurantes-franceses-para-desfrutar-em-sao-paulo/" class="invert">
+                           Conheça 3 opções de restaurantes franceses para desfrutar em São Paulo
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2023-12-01T23:44">
+                        01/12/2023
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/desvende-o-mundo-dos-drinks-com-estas-6-receitas-simples-e-torne-se-um-especialista-no-assunto/" class="c-card__image">
+                     <img
+                        src="/static/uploads/top-6-drinks-f1c83e-thumb.webp"
+                        loading="lazy"
+                        alt="Desvende o mundo dos drinks com 6 receitas simples e torne-se um especialista no assunto">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/bebidas/">Bebidas</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/desvende-o-mundo-dos-drinks-com-estas-6-receitas-simples-e-torne-se-um-especialista-no-assunto/" class="invert">
+                           Desvende o mundo dos drinks com 6 receitas simples e torne-se um especialista no assunto
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2023-12-01T23:31">
+                        01/12/2023
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/lista-das-7-faculdades-de-gastronomia-com-notas-mais-altas-no-mec/" class="c-card__image">
+                     <img
+                        src="/static/uploads/top-7-faculdades-gastronomia-nota-mec-2c1883-thumb.webp"
+                        loading="lazy"
+                        alt="Lista das 7 Faculdades de Gastronomia com Notas Mais Altas no MEC">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/dicas/">Dicas</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/lista-das-7-faculdades-de-gastronomia-com-notas-mais-altas-no-mec/" class="invert">
+                           Lista das 7 Faculdades de Gastronomia com Notas Mais Altas no MEC
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2023-12-01T22:49">
+                        01/12/2023
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/pao-bolo-ou-pao-de-liquidificador/" class="c-card__image">
+                     <img
+                        src="/static/uploads/pao-bolo-ou-pao-de-liquidificador-645713-thumb.webp"
+                        loading="lazy"
+                        alt="Pão Bolo ou Pão de Liquidificador">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/receitas-doces/">Receitas Docês</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/pao-bolo-ou-pao-de-liquidificador/" class="invert">
+                           Pão Bolo ou Pão de Liquidificador
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2023-12-01T18:23">
+                        01/12/2023
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/risole-facil-de-carne-moida/" class="c-card__image">
+                     <img
+                        src="/static/uploads/risoles-de-carne-o-opolo-gastronomico-400ead-thumb.webp"
+                        loading="lazy"
+                        alt="Risole Fácil de Carne Moída vem Aprender a Fazer">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/receitas/">Receitas</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/risole-facil-de-carne-moida/" class="invert">
+                           Risole Fácil de Carne Moída vem Aprender a Fazer
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2023-11-30T21:59">
+                        30/11/2023
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/iogurte-de-morango-caseiro-com-apenas-3-ingredientes/" class="c-card__image">
+                     <img
+                        src="/static/uploads/iogurte-de-morango-caseiro-com-apenas-3-ingredientes-017590-thumb.webp"
+                        loading="lazy"
+                        alt="Iogurte de morango caseiro com apenas 3 ingredientes">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/melhores-receitas/">Melhores Receitas</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/iogurte-de-morango-caseiro-com-apenas-3-ingredientes/" class="invert">
+                           Iogurte de morango caseiro com apenas 3 ingredientes
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2023-11-29T22:19">
+                        29/11/2023
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/bolo-de-chocolate-bem-chocolatudo/" class="c-card__image">
+                     <img
+                        src="/static/uploads/bolo-de-chocolate-bem-chocolatudo-1-62eb90-thumb.webp"
+                        loading="lazy"
+                        alt="Bolo de Chocolate Bem Chocolatudo">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/receitas-doces/">Receitas Docês</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/bolo-de-chocolate-bem-chocolatudo/" class="invert">
+                           Bolo de Chocolate Bem Chocolatudo
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2023-11-29T21:37">
+                        29/11/2023
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/pudim-de-leite-condensado-delicioso-e-sem-quebrar/" class="c-card__image">
+                     <img
+                        src="/static/uploads/pudim-de-leite-condensado-delicioso-7ffe2f-thumb.webp"
+                        loading="lazy"
+                        alt="Pudim de Leite Condensado Delicioso e Sem Quebrar">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     
+                        
+                     
+                        
+                           <div class="c-card__tag">
+                              <a href="/categoria/receitas/">Receitas</a>
+                           </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                     
+                     <h2 class="c-card__title">
+                        <a href="/pudim-de-leite-condensado-delicioso-e-sem-quebrar/" class="invert">
+                           Pudim de Leite Condensado Delicioso e Sem Quebrar
+                        </a>
+                     </h2>
+                  </header>
+                  
+                  <footer class="c-card__meta">
+                     <time datetime="2023-11-29T21:16">
+                        29/11/2023
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+      </div>
+      
+      
+   <nav class="pagination">
+      
+         <a href="/page/20/" class="btn">
+            Anterior
+         </a>
+      
+      
+      
+         <a href="/page/22/" class="btn">
+            Próxima
+         </a>
+      
+   </nav>
 
-                        const imgHtml = post.image
-                            ? `<img src="${post.image}" class="rounded me-3 object-fit-cover" style="width: 45px; height: 45px;">`
-                            : `<div class="bg-secondary rounded me-3 opacity-25" style="width: 45px; height: 45px;"></div>`;
+   </div>
+</main>
 
-                        link.innerHTML = `
-                            ${imgHtml}
-                            <div class="overflow-hidden">
-                                <h6 class="mb-0 text-truncate text-dark fw-bold" style="font-size: 0.9rem;">${post.title}</h6>
-                                <small class="text-muted" style="font-size: 0.75rem;">${post.date}</small>
-                            </div>
-                        `;
-                        searchResults.appendChild(link);
-                    });
-                    searchResults.classList.remove('d-none');
-                } else {
-                    searchResults.innerHTML = '<div class="list-group-item text-muted text-center py-3 border-0 small">Nenhum artigo encontrado.</div>';
-                    searchResults.classList.remove('d-none');
-                }
-            });
+<footer class="footer">
+   <div class="footer__social">
+      
+      
+      
+      
+   </div>
+   
+   <div class="footer__description" style="max-width: 600px; margin: 0 auto 2rem; color: #a1a1aa; font-size: 0.95rem; text-align: center;">
+      O Polo Gastronômico traz notícias, dicas para restaurantes, pizzarias, lanchonetes, gestão do seu negócio, lugares para comer, além de receitas deliciosas!
 
-            document.addEventListener('click', (e) => {
-                if (searchInput && searchResults && !searchInput.contains(e.target) && !searchResults.contains(e.target)) {
-                    searchResults.classList.add('d-none');
-                }
-            });
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+O conteúdo fornecido neste blog destina-se apenas a fins informativos, não se responsabilizando por quaisquer resultados ou consequências decorrentes da implementação das informações aqui contidas.
+   </div>
+   
 
-    
+   <div class="footer__copyright">
+      
+      © 2026 O POLO - Todos os direitos reservados.
+   </div>
+</footer>
 
+<script>
+   window.publiiThemeMenuConfig = {    
+      mobileMenuMode: 'sidebar',
+      animationSpeed: 300,
+      submenuWidth: 'auto',
+      doubleClickTime: 500,
+      mobileMenuExpandableSubmenus: true, 
+      relatedContainerForOverlayMenuSelector: '.navbar',
+   };
+</script>
+<script defer src="/themes/taste/assets/js/scripts.min.js"></script>
+
+<script>        
+   var images = document.querySelectorAll('img[loading]');
+
+   for (var i = 0; i < images.length; i++) {
+      if (images[i].complete) {
+            images[i].classList.add('is-loaded');
+      } else {
+            images[i].addEventListener('load', function () {
+               this.classList.add('is-loaded');
+            }, false);
+      }
+   }
+</script>
+
+
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>

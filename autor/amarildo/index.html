@@ -1,769 +1,877 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artigos de Amarildo Santos - </title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        
+        
+        
+        
 
-    <meta name="description" content="Leia todos os artigos escritos por Amarildo Santos em .">
-    <link rel="canonical" href="/autor/amarildo/" />
-
-    
-
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"></noscript>
-
-    
-
-    <style>
-        body { background-color: #f6f6f6; color: #333333; }
-        .custom-hover:hover { opacity: 1 !important; text-decoration: underline !important; }
-        #searchResults::-webkit-scrollbar { width: 6px; }
-        #searchResults::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 4px; }
-        .img-zoom { transition: transform 0.4s ease; }
-        .card:hover .img-zoom { transform: scale(1.05); }
-        .text-editorial { color: #277a5b; }
-    </style>
-</head>
-<body class="d-flex flex-column min-vh-100">
-
-    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #2b5c92;">
-        <div class="container py-1 py-lg-2">
-
-            <a class="navbar-brand fw-bold d-flex align-items-center me-lg-5" href="/">
-                
-                    <span class="fs-4 tracking-wide"></span>
-                
-            </a>
-
-            <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar menu de navegação">
-                <i class="bi bi-list text-white" style="font-size: 1.8rem;"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto gap-1 gap-lg-3">
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/" style="font-size: 0.95rem;">Início</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/melhores-receitas/" style="font-size: 0.95rem;">Melhores Receitas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/receitas/" style="font-size: 0.95rem;">Receitas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/onde-comer/" style="font-size: 0.95rem;">Onde Comer</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/receitas-salgadas/" style="font-size: 0.95rem;">Receitas Salgadas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/receitas-doces/" style="font-size: 0.95rem;">Receitas Docês</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/noticias/" style="font-size: 0.95rem;">Notícias</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/dicas/" style="font-size: 0.95rem;">Dicas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/bebidas/" style="font-size: 0.95rem;">Bebidas</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/mais-saudavel/" style="font-size: 0.95rem;">Mais Saudável</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" href="/categoria/negocios/" style="font-size: 0.95rem;">Negócios</a>
-                        </li>
-                        
-                    
-                </ul>
-                <form class="d-flex position-relative mt-3 mt-lg-0" onsubmit="event.preventDefault();" style="width: 100%; max-width: 320px;">
-                    <div class="input-group">
-                        <input class="form-control border-0 shadow-none py-2 ps-3" type="search" id="searchInput" placeholder="Pesquisar por..." autocomplete="off" style="font-size: 0.95rem; border-radius: 4px 0 0 4px;">
-                        <span class="input-group-text bg-white border-0 text-muted pe-3" style="border-radius: 0 4px 4px 0;">
-                            <i class="bi bi-search"></i>
-                        </span>
-                    </div>
-                    <div id="searchResults" class="list-group position-absolute w-100 shadow-lg rounded-3 d-none" style="top: 110%; z-index: 1000; max-height: 350px; overflow-y: auto;"></div>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container mt-5 mb-5 flex-grow-1">
-
-        <div class="card border-0 bg-white rounded-4 p-4 p-md-5 mb-5 shadow-sm">
-            <div class="row align-items-center text-center text-md-start">
-                <div class="col-md-auto mb-4 mb-md-0 d-flex justify-content-center">
-                    
-                    <div class="bg-secondary text-white rounded-circle shadow d-flex align-items-center justify-content-center" style="width: 160px; height: 160px; border: 4px solid #fff;">
-                        <i class="bi bi-person" style="font-size: 5rem;"></i>
-                    </div>
-                    
-                </div>
-                <div class="col-md">
-                    <span class="text-uppercase small text-muted tracking-wide fw-bold"><i class="bi bi-pen"></i> Perfil do Autor</span>
-                    <h1 class="display-5 fw-bold mb-3">Amarildo Santos</h1>
-
-                    
-
-                    <div class="d-flex gap-2 justify-content-center justify-content-md-start">
-                        
-                        
-                        
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h3 class="fw-bold mb-4 text-dark display-6 border-bottom pb-3">Artigos Publicados (30)</h3>
-
-        <div class="row g-4 mb-5">
+        
+            <title>Autor: Amarildo Santos - O Polo</title>
+            <meta name="description" content="No blog O Polo você encontra notícias, receitas e muito mais
+">
             
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/opcoes-deliciosas-para-curtir-a-gastronomia-de-sidrolandia-ms/" class="overflow-hidden">
-                        <img src="/static/uploads/opcoes-deliciosas-para-curtir-a-gastronomia-de-sidrolandia-ms-2d6822-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/opcoes-deliciosas-para-curtir-a-gastronomia-de-sidrolandia-ms/" class="text-decoration-none text-dark custom-hover fw-bold">Opções deliciosas para curtir a gastronomia de Sidrolândia MS</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 09/10/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/5-dicas-para-eternizar-sabores-em-imagens-inesqueciveis/" class="overflow-hidden">
-                        <img src="/static/uploads/5-dicas-para-eternizar-sabores-em-imagens-inesqueciveis-9b2db8-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/5-dicas-para-eternizar-sabores-em-imagens-inesqueciveis/" class="text-decoration-none text-dark custom-hover fw-bold">5 dicas para eternizar sabores em imagens inesquecíveis</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 18/09/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/como-escolher-ferramentas-ideais-para-cozinha-profissional/" class="overflow-hidden">
-                        <img src="/static/uploads/como-escolher-ferramentas-ideais-para-cozinha-profissional-03ca96-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/como-escolher-ferramentas-ideais-para-cozinha-profissional/" class="text-decoration-none text-dark custom-hover fw-bold">Como escolher ferramentas ideais para cozinha profissional?</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 05/09/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/5-vantagens-de-usar-sistemas-integrados-na-gestao-de-restaurantes/" class="overflow-hidden">
-                        <img src="/static/uploads/5-vantagens-de-usar-sistemas-integrados-na-gestao-de-restaurantes-f6cff4-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/5-vantagens-de-usar-sistemas-integrados-na-gestao-de-restaurantes/" class="text-decoration-none text-dark custom-hover fw-bold">5 vantagens de usar sistemas integrados na gestão de restaurantes</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 12/08/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/quando-chamar-um-tecnico-para-geladeira-na-sua-cozinha/" class="overflow-hidden">
-                        <img src="/static/uploads/quando-chamar-um-tecnico-para-geladeira-na-sua-cozinha-28997c-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/quando-chamar-um-tecnico-para-geladeira-na-sua-cozinha/" class="text-decoration-none text-dark custom-hover fw-bold">Quando chamar um técnico para geladeira na sua cozinha</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 03/08/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/cuidados-na-cozinha-solucoes-para-canos-entupidos-no-rj/" class="overflow-hidden">
-                        <img src="/static/uploads/cuidados-na-cozinha-solucoes-para-canos-entupidos-no-rj-15eab3-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/cuidados-na-cozinha-solucoes-para-canos-entupidos-no-rj/" class="text-decoration-none text-dark custom-hover fw-bold">Cuidados na cozinha: soluções para canos entupidos no RJ</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 03/08/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/5-ideias-para-integrar-miniaturas-de-transporte-em-ambientes-gastronomicos/" class="overflow-hidden">
-                        <img src="/static/uploads/5-ideias-para-integrar-miniaturas-de-transporte-em-ambientes-gastronomicos-b20b12-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/5-ideias-para-integrar-miniaturas-de-transporte-em-ambientes-gastronomicos/" class="text-decoration-none text-dark custom-hover fw-bold">5 ideias para integrar miniaturas de transporte em ambientes gastronômicos</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 30/07/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/por-que-terminais-digitais-sao-essenciais-para-cozinhas-profissionais/" class="overflow-hidden">
-                        <img src="/static/uploads/por-que-terminais-digitais-sao-essenciais-para-cozinhas-profissionais-7097e0-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/por-que-terminais-digitais-sao-essenciais-para-cozinhas-profissionais/" class="text-decoration-none text-dark custom-hover fw-bold">Por que terminais digitais são essenciais para cozinhas profissionais</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 29/07/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/cuidados-com-rosto/" class="overflow-hidden">
-                        <img src="/static/uploads/cuidados-com-rosto-2af421-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/cuidados-com-rosto/" class="text-decoration-none text-dark custom-hover fw-bold">Cuidados com rosto</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 26/07/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/5-motivos-para-considerar-caminhao-pipa-em-areas-gourmet-com-piscina/" class="overflow-hidden">
-                        <img src="/static/uploads/5-motivos-para-considerar-caminhao-pipa-em-areas-gourmet-com-piscina-221f3a-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/5-motivos-para-considerar-caminhao-pipa-em-areas-gourmet-com-piscina/" class="text-decoration-none text-dark custom-hover fw-bold">5 motivos para considerar caminhão-pipa em áreas gourmet com piscina</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 21/07/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/7-ingredientes-que-aceleram-o-metabolismo-na-cozinha/" class="overflow-hidden">
-                        <img src="/static/uploads/7-ingredientes-que-aceleram-o-metabolismo-na-cozinha-9d409a-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/7-ingredientes-que-aceleram-o-metabolismo-na-cozinha/" class="text-decoration-none text-dark custom-hover fw-bold">7 Ingredientes que Aceleram o Metabolismo na Cozinha</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 28/06/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/estrategias-para-vender-imoveis-sem-pagar-no-zap-focado-em-culinaria/" class="overflow-hidden">
-                        <img src="/static/uploads/estrategias-para-vender-imoveis-sem-pagar-no-zap-focado-em-culinaria-4a2490-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/estrategias-para-vender-imoveis-sem-pagar-no-zap-focado-em-culinaria/" class="text-decoration-none text-dark custom-hover fw-bold">Estratégias para vender imóveis sem pagar no zap focado em culinária</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 10/06/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/como-escolher-aparelhos-ideais-para-facilitar-suas-receitas/" class="overflow-hidden">
-                        <img src="/static/uploads/como-escolher-aparelhos-ideais-para-facilitar-suas-receitas-caa58a-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/como-escolher-aparelhos-ideais-para-facilitar-suas-receitas/" class="text-decoration-none text-dark custom-hover fw-bold">Como escolher aparelhos ideais para facilitar suas receitas</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 20/05/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/descubra-5-motivos-para-adicionar-feno-grego-aos-seus-pratos/" class="overflow-hidden">
-                        <img src="/static/uploads/descubra-5-motivos-para-adicionar-feno-grego-aos-seus-pratos-f677e7-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/descubra-5-motivos-para-adicionar-feno-grego-aos-seus-pratos/" class="text-decoration-none text-dark custom-hover fw-bold">Descubra 5 motivos para adicionar feno-grego aos seus pratos</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 12/05/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/como-escolher-antenas-digitais-para-sua-area-gourmet-em-casa/" class="overflow-hidden">
-                        <img src="/static/uploads/como-escolher-antenas-digitais-para-sua-area-gourmet-em-casa-e53a31-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/como-escolher-antenas-digitais-para-sua-area-gourmet-em-casa/" class="text-decoration-none text-dark custom-hover fw-bold">Como Escolher Antenas Digitais para sua Área Gourmet em Casa</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 16/04/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/dicas-para-montar-sua-cozinha-dos-sonhos/" class="overflow-hidden">
-                        <img src="/static/uploads/dicas-para-montar-sua-cozinha-dos-sonhos-fc30b5-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/dicas-para-montar-sua-cozinha-dos-sonhos/" class="text-decoration-none text-dark custom-hover fw-bold">Dicas para montar sua cozinha dos sonhos</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 05/04/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/5-dicas-para-quem-cozinha-e-precisa-resolver-papelada-rapida/" class="overflow-hidden">
-                        <img src="/static/uploads/5-dicas-para-quem-cozinha-e-precisa-resolver-papelada-rapida-e9674d-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/5-dicas-para-quem-cozinha-e-precisa-resolver-papelada-rapida/" class="text-decoration-none text-dark custom-hover fw-bold">5 dicas para quem cozinha e precisa resolver papelada rápida</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 26/03/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/como-preparar-uma-delicia-assada-de-milho-passo-a-passo/" class="overflow-hidden">
-                        <img src="/static/uploads/como-preparar-uma-delicia-assada-de-milho-passo-a-passo-6b18fd-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/como-preparar-uma-delicia-assada-de-milho-passo-a-passo/" class="text-decoration-none text-dark custom-hover fw-bold">Como preparar uma delícia assada de milho passo a passo</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 03/03/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/barracas-resistentes-para-quem-ama-cozinhar-em-meio-a-natureza/" class="overflow-hidden">
-                        <img src="/static/uploads/barracas-resistentes-para-quem-ama-cozinhar-em-meio-a-natureza-a138f5-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/barracas-resistentes-para-quem-ama-cozinhar-em-meio-a-natureza/" class="text-decoration-none text-dark custom-hover fw-bold">Barracas resistentes para quem ama cozinhar em meio à natureza</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 02/03/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/advogado-para-negocios-locais-em-recife/" class="overflow-hidden">
-                        <img src="/static/uploads/advogado-para-negocios-locais-em-recife-8594d4-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/advogado-para-negocios-locais-em-recife/" class="text-decoration-none text-dark custom-hover fw-bold">Advogado para Negõcios Locais em Recife</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 24/02/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/quais-os-melhores-programas-de-trainee-para-chefs-em-2026/" class="overflow-hidden">
-                        <img src="/static/uploads/quais-os-melhores-programas-de-trainee-para-chefs-em-2026-6230e3-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/quais-os-melhores-programas-de-trainee-para-chefs-em-2026/" class="text-decoration-none text-dark custom-hover fw-bold">Quais os melhores programas de trainee para chefs em 2026?</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 20/02/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/sorriso-saudavel-segredos-para-quem-vive-preparando-delicias-culinarias/" class="overflow-hidden">
-                        <img src="/static/uploads/sorriso-saudavel-segredos-para-quem-vive-preparando-delicias-culinarias-f0bc7b-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/sorriso-saudavel-segredos-para-quem-vive-preparando-delicias-culinarias/" class="text-decoration-none text-dark custom-hover fw-bold">Sorriso saudável: segredos para quem vive preparando delícias culinárias</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 27/01/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/como-calcular-o-valor-do-hapvida-para-amantes-da-culinaria/" class="overflow-hidden">
-                        <img src="/static/uploads/como-calcular-o-valor-do-hapvida-para-amantes-da-culinaria-db69c6-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/como-calcular-o-valor-do-hapvida-para-amantes-da-culinaria/" class="text-decoration-none text-dark custom-hover fw-bold">Como calcular o valor do Hapvida para amantes da culinária</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 25/01/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/a-alquimia-da-culinaria-a-metodologia-de-elevacao-transforme-uma-receita-simples-em-padrao-masterchef-o-potencial-das-receitas-simples/" class="overflow-hidden">
-                        <img src="/static/uploads/cascavelas-assadas-com-pure-de-abacate-23-21519423881-538d22-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/a-alquimia-da-culinaria-a-metodologia-de-elevacao-transforme-uma-receita-simples-em-padrao-masterchef-o-potencial-das-receitas-simples/" class="text-decoration-none text-dark custom-hover fw-bold">A Alquimia da Culinária: A Metodologia de Elevação – Transforme uma Receita Simples em Padrão MasterChef – O Potencial das Receitas Simples</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 03/01/2026</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/dicas-para-preparar-um-churrasco-pratico-e-saboroso-em-bh/" class="overflow-hidden">
-                        <img src="/static/uploads/dicas-para-preparar-um-churrasco-pratico-e-saboroso-em-bh-7e36d8-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/dicas-para-preparar-um-churrasco-pratico-e-saboroso-em-bh/" class="text-decoration-none text-dark custom-hover fw-bold">Dicas para preparar um churrasco prático e saboroso em BH</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 23/12/2025</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/receitas-que-elevam-seu-animo-e-saude-na-cozinha-diaria/" class="overflow-hidden">
-                        <img src="/static/uploads/receitas-que-elevam-seu-animo-e-saude-na-cozinha-diaria-63004b-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/receitas-que-elevam-seu-animo-e-saude-na-cozinha-diaria/" class="text-decoration-none text-dark custom-hover fw-bold">Receitas que elevam seu ânimo e saúde na cozinha diária</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 28/10/2025</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/entenda-como-sistemas-inteligentes-estao-moldando-o-futuro-dos-negocios/" class="overflow-hidden">
-                        <img src="/static/uploads/pdv-restaurante-78409f-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/entenda-como-sistemas-inteligentes-estao-moldando-o-futuro-dos-negocios/" class="text-decoration-none text-dark custom-hover fw-bold">Entenda Como Sistemas Inteligentes Estão Moldando o Futuro dos Negócios!</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 30/12/2024</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/bacalhau-e-remoso/" class="overflow-hidden">
-                        <img src="/static/uploads/bacalhau-e-remoso-ou-nao-23879a-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/bacalhau-e-remoso/" class="text-decoration-none text-dark custom-hover fw-bold">Bacalhau é remoso?</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 23/11/2024</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/o-cha-mate-gelado-e-eleito-a-infusao-mais-popular-do-brasil/" class="overflow-hidden">
-                        <img src="/static/uploads/cha-mate-gelado-0ac1d1-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/o-cha-mate-gelado-e-eleito-a-infusao-mais-popular-do-brasil/" class="text-decoration-none text-dark custom-hover fw-bold">O Chá Mate Gelado é eleito a infusão mais popular do Brasil</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 04/11/2024</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 bg-white">
-                    
-                    <a href="/dicas-de-gastronomia-de-candeias-bahia/" class="overflow-hidden">
-                        <img src="/static/uploads/candeias-bahia-culinaria-scaled-8a268d-thumb.webp" alt="None" title="None" class="card-img-top rounded-top img-zoom" style="height: 200px; object-fit: cover;" loading="lazy">
-                    </a>
-                    
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="h5 card-title mb-3">
-                            <a href="/dicas-de-gastronomia-de-candeias-bahia/" class="text-decoration-none text-dark custom-hover fw-bold">Dicas de Gastronomia de Candeias, Bahia</a>
-                        </h2>
-                        <p class="text-muted small mt-auto mb-0"><i class="bi bi-calendar3"></i> 04/09/2024</p>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </main>
+            <meta property="og:type" content="profile">
+            <meta property="og:title" content="Autor: Amarildo Santos - O Polo">
+            <meta property="og:description" content="No blog O Polo você encontra notícias, receitas e muito mais
+">
+            <meta property="og:site_name" content="O Polo">
+            <link rel="canonical" href="https://opolo.com.br/autor/amarildo/" />
+            <meta name="twitter:card" content="summary">
+        
 
-    <footer class="text-light py-5 mt-auto" style="background-color: #212529;">
-        <div class="container">
-            <div class="row gy-4 text-center text-md-start">
-                <div class="col-lg-5 pe-lg-5">
-                    <p class="text-uppercase fw-bold mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
-                        
-                            
-                        
-                    </p>
-                    <p class="text-light opacity-75 small lh-lg mb-0">
-                        
-                    </p>
-                </div>
-                <div class="col-lg-3">
-                    <p class="text-uppercase fw-bold mb-3 text-white-50" style="font-size: 0.9rem; letter-spacing: 1px;">Navegação</p>
-                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-                        
-                            <li><a href="/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Início</a></li>
-                            
-                            <li><a href="/contato/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Contato</a></li>
-                            
-                            <li><a href="/politica-de-privacidade/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Política de Privacidade</a></li>
-                            
-                            <li><a href="/sobre-nos/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Sobre Nós</a></li>
-                            
-                            <li><a href="/termos-e-condicoes/" class="text-decoration-none text-light opacity-75 custom-hover"><i class="bi bi-chevron-right small me-1"></i> Termos e Condições</a></li>
-                            
-                        
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <p class="text-uppercase fw-bold mb-3 text-white-50" style="font-size: 0.9rem; letter-spacing: 1px;">Siga-nos</p>
-                    <div class="d-flex gap-2 justify-content-center justify-content-md-start flex-wrap">
-                        
-                        
-                        
-                        
-                    </div>
-                </div>
-            </div>
-            <hr class="mt-5 mb-4 border-secondary opacity-25">
+        
+        
+        <link rel="shortcut icon" href="/static/uploads/o-polo-icone-favicon.webp?v=1792087116" />
+        <link rel="apple-touch-icon" href="/static/uploads/o-polo-icone-favicon.webp?v=1792087116">
+        
 
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <p class="small mb-0 opacity-75">
-                        
-                    </p>
-                </div>
+         
+        
 
-                <div class="col-md-6 text-center text-md-end">
-                    <ul class="list-inline mb-0">
-                        
-                            
-                            
+        <!-- Bootstrap CSS para compatibilidade com posts gerados -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-                            
-                        
-                            
-                            
+        <link rel="stylesheet" href="/themes/taste/assets/css/style.css">       
+        
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>     
+        
+        
+    </head>
+    <body class="author-template">
+<header class="header" id="js-header">
 
-                            
-                        
-                            
-                            
+   <a href="/" class="logo">
+      
+         <img src="/static/uploads/o-polo-logotipo.webp?v=1792087104" alt="O Polo" width="150" height="auto">
+      
+   </a>
 
-                            
-                        
-                            
-                            
+   <nav class="navbar js-navbar">
+      <button class="navbar__toggle js-toggle" aria-label="Menu">
+         <span class="navbar__toggle-box">
+            <span class="navbar__toggle-inner">Menu</span>
+         </span>
+      </button>
+      <ul class="navbar__menu">
+   
+       <li>
+          <a href="/">Início</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/melhores-receitas/">Melhores Receitas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/receitas/">Receitas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/onde-comer/">Onde Comer</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/receitas-salgadas/">Receitas Salgadas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/receitas-doces/">Receitas Docês</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/noticias/">Notícias</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/dicas/">Dicas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/bebidas/">Bebidas</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/mais-saudavel/">Mais Saudável</a>
+       </li>
+       
+       <li>
+          <a href="/categoria/negocios/">Negócios</a>
+       </li>
+       
+       
+       <li>
+          <a href="/contato/">Contato</a>
+       </li>
+       
+       <li>
+          <a href="/politica-de-privacidade/">Política de Privacidade</a>
+       </li>
+       
+       <li>
+          <a href="/sobre-nos/">Sobre Nós</a>
+       </li>
+       
+       <li>
+          <a href="/termos-e-condicoes/">Termos e Condições</a>
+       </li>
+       
+   
+</ul>
+   </nav>
 
-                            
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+   <div class="search">
+      <div class="search__overlay js-search-overlay">
+         <form action="/pesquisa/" method="get" class="search__form">
+            <input type="search" name="q" placeholder="Pesquisar..." class="search__input" required>
+         </form>
+      </div>
+      <button
+         class="search__btn js-search-btn"
+         aria-label="Pesquisar">
+         <svg role="presentation" focusable="false" height="18" width="18">
+            <use xlink:href="/themes/taste/assets/svg/svg-map.svg#search"/>
+         </svg>
+      </button>
+   </div>
 
-    
+</header>
+<main>
+   <div class="wrapper">
+      <div class="hero">
+         <h1>Artigos de: Amarildo Santos</h1>
+      </div>
+      
+      <div class="l-grid l-grid--3">
+         
+            <article class="c-card">
+               
+                  <a href="/opcoes-deliciosas-para-curtir-a-gastronomia-de-sidrolandia-ms/" class="c-card__image">
+                     <img src="/static/uploads/opcoes-deliciosas-para-curtir-a-gastronomia-de-sidrolandia-ms-2d6822-thumb.webp" loading="lazy" alt="Opções deliciosas para curtir a gastronomia de Sidrolândia MS">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/opcoes-deliciosas-para-curtir-a-gastronomia-de-sidrolandia-ms/" class="invert">
+                           Opções deliciosas para curtir a gastronomia de Sidrolândia MS
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-10-09T00:00">
+                        09/10/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/5-dicas-para-eternizar-sabores-em-imagens-inesqueciveis/" class="c-card__image">
+                     <img src="/static/uploads/5-dicas-para-eternizar-sabores-em-imagens-inesqueciveis-9b2db8-thumb.webp" loading="lazy" alt="5 dicas para eternizar sabores em imagens inesquecíveis">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/5-dicas-para-eternizar-sabores-em-imagens-inesqueciveis/" class="invert">
+                           5 dicas para eternizar sabores em imagens inesquecíveis
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-09-18T00:00">
+                        18/09/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/como-escolher-ferramentas-ideais-para-cozinha-profissional/" class="c-card__image">
+                     <img src="/static/uploads/como-escolher-ferramentas-ideais-para-cozinha-profissional-03ca96-thumb.webp" loading="lazy" alt="Como escolher ferramentas ideais para cozinha profissional?">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/como-escolher-ferramentas-ideais-para-cozinha-profissional/" class="invert">
+                           Como escolher ferramentas ideais para cozinha profissional?
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-09-05T00:00">
+                        05/09/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/5-vantagens-de-usar-sistemas-integrados-na-gestao-de-restaurantes/" class="c-card__image">
+                     <img src="/static/uploads/5-vantagens-de-usar-sistemas-integrados-na-gestao-de-restaurantes-f6cff4-thumb.webp" loading="lazy" alt="5 vantagens de usar sistemas integrados na gestão de restaurantes">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/5-vantagens-de-usar-sistemas-integrados-na-gestao-de-restaurantes/" class="invert">
+                           5 vantagens de usar sistemas integrados na gestão de restaurantes
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-08-12T00:00">
+                        12/08/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/quando-chamar-um-tecnico-para-geladeira-na-sua-cozinha/" class="c-card__image">
+                     <img src="/static/uploads/quando-chamar-um-tecnico-para-geladeira-na-sua-cozinha-28997c-thumb.webp" loading="lazy" alt="Quando chamar um técnico para geladeira na sua cozinha">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/quando-chamar-um-tecnico-para-geladeira-na-sua-cozinha/" class="invert">
+                           Quando chamar um técnico para geladeira na sua cozinha
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-08-03T00:00">
+                        03/08/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/cuidados-na-cozinha-solucoes-para-canos-entupidos-no-rj/" class="c-card__image">
+                     <img src="/static/uploads/cuidados-na-cozinha-solucoes-para-canos-entupidos-no-rj-15eab3-thumb.webp" loading="lazy" alt="Cuidados na cozinha: soluções para canos entupidos no RJ">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/cuidados-na-cozinha-solucoes-para-canos-entupidos-no-rj/" class="invert">
+                           Cuidados na cozinha: soluções para canos entupidos no RJ
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-08-03T00:00">
+                        03/08/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/5-ideias-para-integrar-miniaturas-de-transporte-em-ambientes-gastronomicos/" class="c-card__image">
+                     <img src="/static/uploads/5-ideias-para-integrar-miniaturas-de-transporte-em-ambientes-gastronomicos-b20b12-thumb.webp" loading="lazy" alt="5 ideias para integrar miniaturas de transporte em ambientes gastronômicos">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/5-ideias-para-integrar-miniaturas-de-transporte-em-ambientes-gastronomicos/" class="invert">
+                           5 ideias para integrar miniaturas de transporte em ambientes gastronômicos
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-07-30T00:00">
+                        30/07/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/por-que-terminais-digitais-sao-essenciais-para-cozinhas-profissionais/" class="c-card__image">
+                     <img src="/static/uploads/por-que-terminais-digitais-sao-essenciais-para-cozinhas-profissionais-7097e0-thumb.webp" loading="lazy" alt="Por que terminais digitais são essenciais para cozinhas profissionais">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/por-que-terminais-digitais-sao-essenciais-para-cozinhas-profissionais/" class="invert">
+                           Por que terminais digitais são essenciais para cozinhas profissionais
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-07-29T00:00">
+                        29/07/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/cuidados-com-rosto/" class="c-card__image">
+                     <img src="/static/uploads/cuidados-com-rosto-2af421-thumb.webp" loading="lazy" alt="Cuidados com rosto">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/cuidados-com-rosto/" class="invert">
+                           Cuidados com rosto
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-07-26T15:35">
+                        26/07/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/5-motivos-para-considerar-caminhao-pipa-em-areas-gourmet-com-piscina/" class="c-card__image">
+                     <img src="/static/uploads/5-motivos-para-considerar-caminhao-pipa-em-areas-gourmet-com-piscina-221f3a-thumb.webp" loading="lazy" alt="5 motivos para considerar caminhão-pipa em áreas gourmet com piscina">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/5-motivos-para-considerar-caminhao-pipa-em-areas-gourmet-com-piscina/" class="invert">
+                           5 motivos para considerar caminhão-pipa em áreas gourmet com piscina
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-07-21T00:00">
+                        21/07/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/7-ingredientes-que-aceleram-o-metabolismo-na-cozinha/" class="c-card__image">
+                     <img src="/static/uploads/7-ingredientes-que-aceleram-o-metabolismo-na-cozinha-9d409a-thumb.webp" loading="lazy" alt="7 Ingredientes que Aceleram o Metabolismo na Cozinha">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/7-ingredientes-que-aceleram-o-metabolismo-na-cozinha/" class="invert">
+                           7 Ingredientes que Aceleram o Metabolismo na Cozinha
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-06-28T00:00">
+                        28/06/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/estrategias-para-vender-imoveis-sem-pagar-no-zap-focado-em-culinaria/" class="c-card__image">
+                     <img src="/static/uploads/estrategias-para-vender-imoveis-sem-pagar-no-zap-focado-em-culinaria-4a2490-thumb.webp" loading="lazy" alt="Estratégias para vender imóveis sem pagar no zap focado em culinária">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/estrategias-para-vender-imoveis-sem-pagar-no-zap-focado-em-culinaria/" class="invert">
+                           Estratégias para vender imóveis sem pagar no zap focado em culinária
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-06-10T00:00">
+                        10/06/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/como-escolher-aparelhos-ideais-para-facilitar-suas-receitas/" class="c-card__image">
+                     <img src="/static/uploads/como-escolher-aparelhos-ideais-para-facilitar-suas-receitas-caa58a-thumb.webp" loading="lazy" alt="Como escolher aparelhos ideais para facilitar suas receitas">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/como-escolher-aparelhos-ideais-para-facilitar-suas-receitas/" class="invert">
+                           Como escolher aparelhos ideais para facilitar suas receitas
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-05-20T00:00">
+                        20/05/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/descubra-5-motivos-para-adicionar-feno-grego-aos-seus-pratos/" class="c-card__image">
+                     <img src="/static/uploads/descubra-5-motivos-para-adicionar-feno-grego-aos-seus-pratos-f677e7-thumb.webp" loading="lazy" alt="Descubra 5 motivos para adicionar feno-grego aos seus pratos">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/descubra-5-motivos-para-adicionar-feno-grego-aos-seus-pratos/" class="invert">
+                           Descubra 5 motivos para adicionar feno-grego aos seus pratos
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-05-12T00:00">
+                        12/05/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/como-escolher-antenas-digitais-para-sua-area-gourmet-em-casa/" class="c-card__image">
+                     <img src="/static/uploads/como-escolher-antenas-digitais-para-sua-area-gourmet-em-casa-e53a31-thumb.webp" loading="lazy" alt="Como Escolher Antenas Digitais para sua Área Gourmet em Casa">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/como-escolher-antenas-digitais-para-sua-area-gourmet-em-casa/" class="invert">
+                           Como Escolher Antenas Digitais para sua Área Gourmet em Casa
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-04-16T00:00">
+                        16/04/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/dicas-para-montar-sua-cozinha-dos-sonhos/" class="c-card__image">
+                     <img src="/static/uploads/dicas-para-montar-sua-cozinha-dos-sonhos-fc30b5-thumb.webp" loading="lazy" alt="Dicas para montar sua cozinha dos sonhos">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/dicas-para-montar-sua-cozinha-dos-sonhos/" class="invert">
+                           Dicas para montar sua cozinha dos sonhos
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-04-05T12:11">
+                        05/04/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/5-dicas-para-quem-cozinha-e-precisa-resolver-papelada-rapida/" class="c-card__image">
+                     <img src="/static/uploads/5-dicas-para-quem-cozinha-e-precisa-resolver-papelada-rapida-e9674d-thumb.webp" loading="lazy" alt="5 dicas para quem cozinha e precisa resolver papelada rápida">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/5-dicas-para-quem-cozinha-e-precisa-resolver-papelada-rapida/" class="invert">
+                           5 dicas para quem cozinha e precisa resolver papelada rápida
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-03-26T00:00">
+                        26/03/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/como-preparar-uma-delicia-assada-de-milho-passo-a-passo/" class="c-card__image">
+                     <img src="/static/uploads/como-preparar-uma-delicia-assada-de-milho-passo-a-passo-6b18fd-thumb.webp" loading="lazy" alt="Como preparar uma delícia assada de milho passo a passo">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/como-preparar-uma-delicia-assada-de-milho-passo-a-passo/" class="invert">
+                           Como preparar uma delícia assada de milho passo a passo
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-03-03T15:22">
+                        03/03/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/barracas-resistentes-para-quem-ama-cozinhar-em-meio-a-natureza/" class="c-card__image">
+                     <img src="/static/uploads/barracas-resistentes-para-quem-ama-cozinhar-em-meio-a-natureza-a138f5-thumb.webp" loading="lazy" alt="Barracas resistentes para quem ama cozinhar em meio à natureza">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/barracas-resistentes-para-quem-ama-cozinhar-em-meio-a-natureza/" class="invert">
+                           Barracas resistentes para quem ama cozinhar em meio à natureza
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-03-02T00:00">
+                        02/03/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/advogado-para-negocios-locais-em-recife/" class="c-card__image">
+                     <img src="/static/uploads/advogado-para-negocios-locais-em-recife-8594d4-thumb.webp" loading="lazy" alt="Advogado para Negõcios Locais em Recife">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/advogado-para-negocios-locais-em-recife/" class="invert">
+                           Advogado para Negõcios Locais em Recife
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-02-24T00:00">
+                        24/02/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/quais-os-melhores-programas-de-trainee-para-chefs-em-2026/" class="c-card__image">
+                     <img src="/static/uploads/quais-os-melhores-programas-de-trainee-para-chefs-em-2026-6230e3-thumb.webp" loading="lazy" alt="Quais os melhores programas de trainee para chefs em 2026?">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/quais-os-melhores-programas-de-trainee-para-chefs-em-2026/" class="invert">
+                           Quais os melhores programas de trainee para chefs em 2026?
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-02-20T10:50">
+                        20/02/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/sorriso-saudavel-segredos-para-quem-vive-preparando-delicias-culinarias/" class="c-card__image">
+                     <img src="/static/uploads/sorriso-saudavel-segredos-para-quem-vive-preparando-delicias-culinarias-f0bc7b-thumb.webp" loading="lazy" alt="Sorriso saudável: segredos para quem vive preparando delícias culinárias">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/sorriso-saudavel-segredos-para-quem-vive-preparando-delicias-culinarias/" class="invert">
+                           Sorriso saudável: segredos para quem vive preparando delícias culinárias
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-01-27T00:00">
+                        27/01/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/como-calcular-o-valor-do-hapvida-para-amantes-da-culinaria/" class="c-card__image">
+                     <img src="/static/uploads/como-calcular-o-valor-do-hapvida-para-amantes-da-culinaria-db69c6-thumb.webp" loading="lazy" alt="Como calcular o valor do Hapvida para amantes da culinária">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/como-calcular-o-valor-do-hapvida-para-amantes-da-culinaria/" class="invert">
+                           Como calcular o valor do Hapvida para amantes da culinária
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-01-25T00:00">
+                        25/01/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/a-alquimia-da-culinaria-a-metodologia-de-elevacao-transforme-uma-receita-simples-em-padrao-masterchef-o-potencial-das-receitas-simples/" class="c-card__image">
+                     <img src="/static/uploads/cascavelas-assadas-com-pure-de-abacate-23-21519423881-538d22-thumb.webp" loading="lazy" alt="A Alquimia da Culinária: A Metodologia de Elevação – Transforme uma Receita Simples em Padrão MasterChef – O Potencial das Receitas Simples">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/a-alquimia-da-culinaria-a-metodologia-de-elevacao-transforme-uma-receita-simples-em-padrao-masterchef-o-potencial-das-receitas-simples/" class="invert">
+                           A Alquimia da Culinária: A Metodologia de Elevação – Transforme uma Receita Simples em Padrão MasterChef – O Potencial das Receitas Simples
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2026-01-03T11:34">
+                        03/01/2026
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/dicas-para-preparar-um-churrasco-pratico-e-saboroso-em-bh/" class="c-card__image">
+                     <img src="/static/uploads/dicas-para-preparar-um-churrasco-pratico-e-saboroso-em-bh-7e36d8-thumb.webp" loading="lazy" alt="Dicas para preparar um churrasco prático e saboroso em BH">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/dicas-para-preparar-um-churrasco-pratico-e-saboroso-em-bh/" class="invert">
+                           Dicas para preparar um churrasco prático e saboroso em BH
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2025-12-23T00:00">
+                        23/12/2025
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/receitas-que-elevam-seu-animo-e-saude-na-cozinha-diaria/" class="c-card__image">
+                     <img src="/static/uploads/receitas-que-elevam-seu-animo-e-saude-na-cozinha-diaria-63004b-thumb.webp" loading="lazy" alt="Receitas que elevam seu ânimo e saúde na cozinha diária">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/receitas-que-elevam-seu-animo-e-saude-na-cozinha-diaria/" class="invert">
+                           Receitas que elevam seu ânimo e saúde na cozinha diária
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2025-10-28T00:00">
+                        28/10/2025
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/entenda-como-sistemas-inteligentes-estao-moldando-o-futuro-dos-negocios/" class="c-card__image">
+                     <img src="/static/uploads/pdv-restaurante-78409f-thumb.webp" loading="lazy" alt="Entenda Como Sistemas Inteligentes Estão Moldando o Futuro dos Negócios!">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/entenda-como-sistemas-inteligentes-estao-moldando-o-futuro-dos-negocios/" class="invert">
+                           Entenda Como Sistemas Inteligentes Estão Moldando o Futuro dos Negócios!
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2024-12-30T20:48">
+                        30/12/2024
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/bacalhau-e-remoso/" class="c-card__image">
+                     <img src="/static/uploads/bacalhau-e-remoso-ou-nao-23879a-thumb.webp" loading="lazy" alt="Bacalhau é remoso?">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/bacalhau-e-remoso/" class="invert">
+                           Bacalhau é remoso?
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2024-11-23T12:04">
+                        23/11/2024
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/o-cha-mate-gelado-e-eleito-a-infusao-mais-popular-do-brasil/" class="c-card__image">
+                     <img src="/static/uploads/cha-mate-gelado-0ac1d1-thumb.webp" loading="lazy" alt="O Chá Mate Gelado é eleito a infusão mais popular do Brasil">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/o-cha-mate-gelado-e-eleito-a-infusao-mais-popular-do-brasil/" class="invert">
+                           O Chá Mate Gelado é eleito a infusão mais popular do Brasil
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2024-11-04T19:28">
+                        04/11/2024
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+            <article class="c-card">
+               
+                  <a href="/dicas-de-gastronomia-de-candeias-bahia/" class="c-card__image">
+                     <img src="/static/uploads/candeias-bahia-culinaria-scaled-8a268d-thumb.webp" loading="lazy" alt="Dicas de Gastronomia de Candeias, Bahia">
+                  </a>
+               
+               <div class="c-card__wrapper">
+                  <header class="c-card__header">
+                     <h2 class="c-card__title">
+                        <a href="/dicas-de-gastronomia-de-candeias-bahia/" class="invert">
+                           Dicas de Gastronomia de Candeias, Bahia
+                        </a>
+                     </h2>
+                  </header>
+                  <footer class="c-card__meta">
+                     <time datetime="2024-09-04T13:37">
+                        04/09/2024
+                     </time>
+                  </footer>
+               </div>
+            </article>
+         
+      </div>
+      
+      
+   </div>
+</main>
+<footer class="footer">
+   <div class="footer__social">
+      
+      
+      
+      
+   </div>
+   
+   <div class="footer__description" style="max-width: 600px; margin: 0 auto 2rem; color: #a1a1aa; font-size: 0.95rem; text-align: center;">
+      O Polo Gastronômico traz notícias, dicas para restaurantes, pizzarias, lanchonetes, gestão do seu negócio, lugares para comer, além de receitas deliciosas!
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const searchInput = document.getElementById('searchInput');
-            const searchResults = document.getElementById('searchResults');
-            let postsData = null;
-            let carregandoBanco = false;
+O conteúdo fornecido neste blog destina-se apenas a fins informativos, não se responsabilizando por quaisquer resultados ou consequências decorrentes da implementação das informações aqui contidas.
+   </div>
+   
 
-            if(searchInput && searchResults) {
+   <div class="footer__copyright">
+      
+      © 2026 O POLO - Todos os direitos reservados.
+   </div>
+</footer>
 
-                // SCRIPT DE PESQUISA OTIMIZADO (Lazy Fetch)
-                searchInput.addEventListener('focus', async () => {
-                    if (!postsData && !carregandoBanco) {
-                        carregandoBanco = true;
-                        try {
-                            const response = await fetch('/posts.json');
-                            if (response.ok) {
-                                postsData = await response.json();
-                            }
-                        } catch (error) {
-                            console.error("Erro ao carregar o banco de pesquisa.");
-                        }
-                    }
-                });
+<script>
+   window.publiiThemeMenuConfig = {    
+      mobileMenuMode: 'sidebar',
+      animationSpeed: 300,
+      submenuWidth: 'auto',
+      doubleClickTime: 500,
+      mobileMenuExpandableSubmenus: true, 
+      relatedContainerForOverlayMenuSelector: '.navbar',
+   };
+</script>
+<script defer src="/themes/taste/assets/js/scripts.min.js"></script>
 
-                searchInput.addEventListener('input', (e) => {
-                    if (!postsData) return; // Se ainda não baixou, não faz nada
+<script>        
+   var images = document.querySelectorAll('img[loading]');
 
-                    const query = e.target.value.toLowerCase().trim();
-                    searchResults.innerHTML = '';
+   for (var i = 0; i < images.length; i++) {
+      if (images[i].complete) {
+            images[i].classList.add('is-loaded');
+      } else {
+            images[i].addEventListener('load', function () {
+               this.classList.add('is-loaded');
+            }, false);
+      }
+   }
+</script>
 
-                    if (query.length < 2) {
-                        searchResults.classList.add('d-none');
-                        return;
-                    }
 
-                    const filteredPosts = postsData.filter(post => post.title.toLowerCase().includes(query));
 
-                    if (filteredPosts.length > 0) {
-                        filteredPosts.forEach(post => {
-                            const link = document.createElement('a');
-                            link.href = `/${post.slug}/`;
-                            link.className = 'list-group-item list-group-item-action d-flex align-items-center border-0 border-bottom';
-                            const imgHtml = post.image ? `<img src="${post.image}" class="rounded me-3 object-fit-cover" style="width: 45px; height: 45px;">` : `<div class="bg-secondary rounded me-3 opacity-25" style="width: 45px; height: 45px;"></div>`;
-                            link.innerHTML = `${imgHtml}<div class="overflow-hidden"><h6 class="mb-0 text-truncate text-dark fw-bold" style="font-size: 0.9rem;">${post.title}</h6><small class="text-muted" style="font-size: 0.75rem;">${post.date}</small></div>`;
-                            searchResults.appendChild(link);
-                        });
-                        searchResults.classList.remove('d-none');
-                    } else {
-                        searchResults.innerHTML = '<div class="list-group-item text-muted text-center py-3 border-0 small">Nenhum artigo encontrado.</div>';
-                        searchResults.classList.remove('d-none');
-                    }
-                });
 
-                document.addEventListener('click', (e) => {
-                    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
-                        searchResults.classList.add('d-none');
-                    }
-                });
-            }
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 
-    
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
